@@ -1,0 +1,9 @@
+#+TITLE: fifql-fx -- re-frame effect handlers for fifql
+#+AUTHOR: Benjamin Zaporzan
+#+DATE: 2019-02-10
+#+EMAIL: benzaporzan@gmail.com
+#+LANGUAGE: en
+#+OPTIONS: H:2 num:t toc:t \n:nil ::t |:t ^:t f:t tex:t
+
+*fifql-fx* is effect handlers for use with client-side browser
+applications that wish to talk to a fifql endpoint.
