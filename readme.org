@@ -6,4 +6,35 @@
 #+OPTIONS: H:2 num:t toc:t \n:nil ::t |:t ^:t f:t tex:t
 
 *fifql-fx* is effect handlers for use with client-side browser
-applications that wish to talk to a fifql endpoint.
+applications that wish to talk to an [[http://github.com/fif-lang/fifql][fifql]] endpoint.
+
+
+#+BEGIN_SRC clojure
+
+
+(require '[re-frame.core :as re-frame :refer [reg-event-fx]])
+(require '[fifql.client :refer [sform]])
+(require '[fifql-fx.effects])
+
+
+(reg-event-fx
+  ::query-user-listing
+  (fn [_ [{:keys [first after]}]]
+    {:fifql/query
+     {:url "/fifql"
+      :sform
+      (sform
+       def first %= first
+       def after %= after
+       {:first first :after after} ? example/user-listing)
+      :on-success ::load-user-listing}}))
+
+
+(reg-event-fx
+  ::load-user-listing
+  (fn [{:keys [db]} [{:keys [stack]}]]
+     (let [user-listing (-> stack first)]
+       {:db (assoc db ::user-listing user-listing)})))
+
+
+#+END_SRC
