@@ -9,6 +9,8 @@
                  [cljs-http "0.1.46"]]
   :repl-options {:init-ns fifql-fx.core}
 
+  :repositories [["clojars" {:sign-releases false}]]
+
   :profiles 
   {:dev 
    {:main fifql-fx.commandline
