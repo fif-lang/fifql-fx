@@ -1,6 +1,6 @@
 (ns fifql-fx.effects
   (:require
-   [reframe.core :as reframe :refer [reg-fx dispatch]]
+   [re-frame.core :as reframe :refer [reg-fx dispatch]]
    [fifql.client :refer [query]]
    [fif.stack-machine.error-handling :refer [error-object?]]))
 
