@@ -1,4 +1,4 @@
-(defproject fif-lang/fifql-fx "1.3.2"
+(defproject fif-lang/fifql-fx "1.4.0"
   :description "re-frame effect handlers for fifql"
   :url "http://github.com/fif-lang/fifql-fx"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -15,7 +15,7 @@
   {:dev 
    {:main fifql-fx.commandline
     :dependencies [[org.clojure/core.async "0.4.490"]
-                   [fif-lang/fifql "1.3.2"]
+                   [fif-lang/fifql "1.4.0"]
                    [mount "0.1.16"]
                    [ring/ring-defaults "0.3.2"]
                    [compojure "1.6.1"]
